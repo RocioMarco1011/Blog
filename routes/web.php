@@ -83,6 +83,7 @@ Route::get("/rutaprueba","PruebaController@prueba2");
 
 Route::resource("/trainers","TrainerContrller");
 Route::get("delete/{id}","TrainerContrller@destroy");
+Route::get("descargar-entrenadores", 'TrainerContrller@pdf')->name('listado.pdf');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
