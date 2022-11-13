@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Trainer;
+use PDF;
 
 class TrainerContrller extends Controller
 {
@@ -147,4 +148,11 @@ class TrainerContrller extends Controller
         else return "El ".$id. "No se pudo borrar";
     
 }
+
+    public function pdf()
+    {
+        $trainers=Trainer::all();
+        $pdf = PDF::loadView('pdf.listado', compact('trainers'));
+        return $pdf->download('listado.pdf');
+    }
 }
