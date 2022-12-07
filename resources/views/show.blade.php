@@ -9,7 +9,10 @@
     <div class="text-center">
         <p>Some quick example text to...</p>
         <a href="/delete/{{$trainer->id}}" class="btn btn-primary">Delete</a>
-        <a href="/trainers/{{$trainer->id}}/edit" class="btn btn-secondary">Editar...</a>
+        <a href="/trainers/{{$trainer->id}}/edit" class="btn btn-secondary">Editar</a>
         <a href="{{route('listado.pdf')}}" class="btn btn-sm btn-primary"> Descargar Entrenadores en PDF</a>
     </div>
+    <div class="container text-center" >
+        <a href="/" class="btn btn-outline-secundary">Regresar</a>
+        </div>
 @endsection

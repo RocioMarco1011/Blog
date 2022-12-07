@@ -59,7 +59,7 @@ class TrainerContrller extends Controller
 
             $trainer->avatar=$name;
             $trainer->save();
-            return "Guardado";
+            return view("Guardado");
 
     }
     }

@@ -2,7 +2,9 @@
 @section('title', 'Trainers')
 @section('content')
 @csrf
-    <p>Listado de Trainers</p>
+<div class="container text-center" >
+    <h3>Listado de Entrenadores</h3>
+</div>
 <div class="row">
 @foreach ($trainers as $trainer)
 <div class="col-sm">
@@ -13,7 +15,6 @@ src="images/{{$trainer->avatar}}" alt="">
   <div class="card-body">
     <h5 class="card-title">{{$trainer->name}}</h5>
     <p class="card-text">{{$trainer->apellido}}</p>
-    <a href="/trainers/{{$trainer->slug}}" class="btn btn-primary">Ver Más</a>
     <a href="/delete/{{$trainer->id}}" class="btn btn-primary">Delete</a>
     <a href="/trainers/{{$trainer->id}}" class="btn btn-secondary">Mostrar</a>
   </div>
