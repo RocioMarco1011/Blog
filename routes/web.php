@@ -87,5 +87,4 @@ Route::get("descargar-entrenadores", 'TrainerContrller@pdf')->name('listado.pdf'
 Route::resource('/search', 'Api\SearchController');
 Route::get('/searchh',['uses' => 'Api\SearchController@search','as' => 'search']);
 Auth::routes();
-
 Route::get('/home', 'HomeController@index')->name('home');
